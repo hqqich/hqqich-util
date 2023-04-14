@@ -43,7 +43,6 @@ buildscript{
 }
 
 dependencies {
-
     implementation("org.jetbrains.kotlin:kotlin-stdlib:1.7.20")
     testImplementation(kotlin("test"))
 }
@@ -55,25 +54,3 @@ tasks.test {
 tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "1.8"
 }
-
-//afterEvaluate {
-//    publishing {
-//        publications {
-////            release(MavenPublication) {
-//////                artifacts {  }
-//////                artifactId = 'com.petterp.gradle.plugin'
-//////                from components.java
-////            }
-////            // Creates a Maven publication called "release".
-////            release(MavenPublication) {
-////                from components.release
-////                        groupId = 'com.github.jitpack'
-////                artifactId = 'android-example'
-////                version = '1.0'
-////            }
-//        }
-//    }
-//}
-//application {
-//    mainClass.set("MainKt")
-//}
