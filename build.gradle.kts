@@ -9,8 +9,20 @@ plugins {
     id("signing")
 }
 
+publishing {
+    publications {
+        create("maven_public", MavenPublication::class) {
+            groupId = "com.github.hqqich"
+            artifactId = "library"
+            version = "1.0.4"
+            from(components.getByName("java"))
+        }
+    }
+}
+
+
 group = "com.github.hqqich"
-version = "1.0.0"
+version = "1.0.4"
 description = "这是一个独立包"
 
 //sourceCompatibility = JavaVersion.VERSION_1_8
@@ -25,8 +37,8 @@ buildscript{
         google()
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:4.0.0")
-        classpath("com.github.dcendents:android-maven-gradle-plugin:2.1")
+//        classpath("com.android.tools.build:gradle:4.0.0")
+//        classpath("com.github.dcendents:android-maven-gradle-plugin:2.1")
     }
 }
 
@@ -44,24 +56,24 @@ tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "1.8"
 }
 
-afterEvaluate {
-    publishing {
-        publications {
-//            release(MavenPublication) {
-////                artifacts {  }
-////                artifactId = 'com.petterp.gradle.plugin'
-////                from components.java
-//            }
-//            // Creates a Maven publication called "release".
-//            release(MavenPublication) {
-//                from components.release
-//                        groupId = 'com.github.jitpack'
-//                artifactId = 'android-example'
-//                version = '1.0'
-//            }
-        }
-    }
-}
+//afterEvaluate {
+//    publishing {
+//        publications {
+////            release(MavenPublication) {
+//////                artifacts {  }
+//////                artifactId = 'com.petterp.gradle.plugin'
+//////                from components.java
+////            }
+////            // Creates a Maven publication called "release".
+////            release(MavenPublication) {
+////                from components.release
+////                        groupId = 'com.github.jitpack'
+////                artifactId = 'android-example'
+////                version = '1.0'
+////            }
+//        }
+//    }
+//}
 //application {
 //    mainClass.set("MainKt")
 //}
