@@ -14,7 +14,7 @@ class FileOutput {
     /**
      * 写文件。
      */
-    fun writeFile(content: StringBuffer, fileName: String) {
+    fun writeFile(content: StringBuilder, fileName: String) {
 
         // 在文件夹目录下新建文件
         val file = File(fileName)
