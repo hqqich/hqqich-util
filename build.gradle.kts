@@ -45,6 +45,14 @@ buildscript{
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib:1.7.20")
     testImplementation(kotlin("test"))
+
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+    implementation("org.apache.commons:commons-lang3:3.12.0")
+    // https://mvnrepository.com/artifact/com.google.code.gson/gson
+    implementation("com.google.code.gson:gson:2.10.1")
+    // https://mvnrepository.com/artifact/com.google.guava/guava
+    implementation("com.google.guava:guava:31.1-jre")
+
 }
 
 tasks.test {
@@ -53,6 +61,11 @@ tasks.test {
 
 tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "1.8"
+}
+
+// 不使用这个打包会报错
+tasks.withType<JavaCompile> {
+    options.encoding = "UTF-8"
 }
 
 // 自定义任务
