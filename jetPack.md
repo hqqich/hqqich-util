@@ -7,7 +7,7 @@ publishing {
         create("maven_public", MavenPublication::class) {
             groupId = "com.github.hqqich"
             artifactId = "library"
-            version = "1.0.4"
+            version = "1.0.5"
             from(components.getByName("java"))
         }
     }

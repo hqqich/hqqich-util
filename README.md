@@ -15,7 +15,7 @@
 <dependency>
     <groupId>com.github.hqqich</groupId>
     <artifactId>hqqich-util</artifactId>
-    <version>v1.0.4</version>
+    <version>v1.0.5</version>
 </dependency>
 ```
 
@@ -30,7 +30,7 @@ allprojects {
 ```
 ```groovy
 dependencies {
-    implementation 'com.github.hqqich:hqqich-util:v1.0.4'
+    implementation 'com.github.hqqich:hqqich-util:v1.0.5'
 }
 ```
 
@@ -38,4 +38,6 @@ dependencies {
 ## 功能
 
 - [x] 扩展Boolean
+- [x] csv快速读写
+- [x] 字符串模板
 - [ ] 
